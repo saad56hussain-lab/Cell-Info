@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;;
+    
+    
+}
+body{
+    background-color:black;
+}
+.navbar {
+   
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid red;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d30000;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navlinks li {
+    position: relative;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navlinks a:hover {
+   background-color: #333;
+    color: #d30000;
+}
+
+.dropdownmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+   
+    background-color: black;
+    list-style: none;
+    display: none;
+    min-width: 150px;
+}
+
+.dropdownmenu li a {
+    padding: 10px;
+    color: white;
+    font-weight:550;
+}
+.dropdownmenu li a:hover{
+    background-color: #333;
+    color: #d30000;
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+}
+.banner{
+    width: 100%;
+    height: 474px;
+    background-color: black;
+    background-image: url(images/cellinfobanner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid red;
+}
+.headingforcardsinhome h1{
+    text-align: center;
+    text-decoration: overline;
+    color: #E50914;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    animation: zoomIn 6s ease;
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(3s);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.card{
+    width: 300px;
+    height: 300px;
+    border: 3px solid #d30000;
+    border-radius: 7px;
+ transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.overlay ul {
+  list-style: square;
+  margin-bottom: 15px;
+}
+
+.card ul li {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    border: 4px solid #a80000;
+}
+.card img{
+     width: 100%;
+     height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+}
+.card:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.overlay h2{
+    margin-bottom: 10px;
+}
+.overlay button{
+    padding: 8px 12px;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    width: 270px;
+    text-align: center;
+    background-color: #E50914;
+    color: #dddddd;
+}
+.overlay button:hover{
+   background-color: #a80000;
+   border: 4px solid black;
+   color: #dddddd;
+  
+}
+
+.parentofcard{
+    display: flex;
+    gap: 30px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+    padding-left: 150px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+.footer div{
+    width: 300px;
+    height: max-content;
+    padding-top: 30px;
+  
+    padding-right: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer  .child2{
+   
+    color: #FFFFFF;
+
+}
+.footer  .child3{
+color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+}
+
+.footer  .child4{
+
+color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+margin-bottom: 55px;
+}
+
+.footer  .child5{
+    
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 45px;
+}
+.footer  .child2 a{
+    text-decoration: none;
+     color: #FFFFFF;
+     font-family: 'Montserrat', sans-serif;
+    }
+
+.footer .child2 h2{
+     margin-top: 30px;
+      color: #d30000;
+      font-family: 'Montserrat', sans-serif;
+   }
+
+.footer .child3 h2{
+     margin-top: 30px;
+      color: #d30000;
+      font-family: 'Montserrat', sans-serif;
+}
+.footer .child3 a{
+    text-decoration: none;
+     color: #FFFFFF;
+}
+.footer div a{
+     color: #FFFFFF;
+    border: 3px sol
+    id black;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    text-decoration: none;
+
+}
+.footer .child4 h2{
+      margin-top: 30px;
+      color: #d30000;
+    
+}
+.footer .child5 h2{
+    margin-top: 30px;
+     color: #d30000;
+      
+}
+.footer div i{
+color: #d30000;
+padding-right: 10px;
+font-size: medium;
+}
+.footer .child5 a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phonedetails {
+    display: flex;
+    gap: 40px;
+    padding: 60px 10%;
+    color: #dddddd;
+}
+
+.phoneimage img {
+    width: 530px;
+    height: 600px;
+    border: 4px solid #d30000;
+    border-radius: 5px;
+}
+
+.phoneinfo h1 {
+    color: #E50914;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.phoneinfo p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.phoneinfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.phoneinfo ul li {
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #E50914;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.logoofapple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoofapple img{
+width: 250px;
+height: 250px;
+}
+.logoofsamsung{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoofsamsung img{
+width: 350px;
+height: 270px;
+}
+.logoofgoogle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoofgoogle img{
+width: 450px;
+height: 370px;
+}
+.companyinfo{
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.companyinfo h2{
+    font-size: 36px;
+    color: #d30000;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.companyinfo p{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dddddd;
+    font-family: 'Montserrat', sans-serif;
+}
+.companyinfo h2{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 3s ease forwards;
+}
+.companyinfo p {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 6s ease forwards;
+}
+.phoneinfo h1{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 3s ease forwards;
+}
+.price{ 
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 3s ease forwards;
+}
+.phoneinfo p{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 4s ease forwards;
+}
+.phoneinfo ul{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 4s ease forwards;
+}
+.phoneinfo li{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 6s ease forwards;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.aboutcellinfo {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+    background-color: #000;
+    gap: 40px;
+}
+
+.abouttext {
+    width: 55%;
+    color: #ffffff;
+}
+
+.abouttext h2 {
+    color: #E50914; 
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.abouttext p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #dddddd;
+}
+
+.aboutimage {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    margin-bottom:150px;
+}
+
+.aboutimage img {
+    width: 650px;
+    height: 550px;
+}
+.abouttext h2{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 3s ease forwards;
+}
+.abouttext .p1 {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 4s ease forwards;
+}
+.abouttext .p2 {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 6s ease forwards;
+}
+.abouttext .p3 {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 8s ease forwards;
+}
+.abouttext .p4 {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeUp 10s ease forwards;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.contactheading {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contactheading h2 {
+    color: #d30000;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.contactheading p {
+    color: #dddddd;
+    font-size: 16px;
+}
+
+.contactcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    gap: 50px;
+}
+
+.contactinfo {
+    width: 45%;
+}
+
+.infobox {
+    margin-bottom: 30px;
+}
+
+.infobox i {
+    font-size: 30px;
+    color: #d30000;
+    margin-bottom: 10px;
+}
+
+.infobox h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.infobox p {
+    color: #dddddd;
+    font-size: 15px;
+}
+
+.contactform {
+    width: 45%;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contactform h2 {
+    color: #d30000;
+    margin-bottom: 20px;
+}
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contactform input,
+.contactform textarea {
+    padding: 12px;
+    border: 1px solid #d30000;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contactform button {
+    padding: 12px;
+    background-color: #d30000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contactform button:hover {
+    background-color: #a80000;
+}
