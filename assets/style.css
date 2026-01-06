@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
 }
 /*saaddd*/
 html {
@@ -75,6 +76,7 @@ body {
     border: 2px solid #E50914;
     margin-top: 5px;
     z-index: 1001;
+    transform: translateY(-10px);
 }
 
 .dropdownmenu li a {
@@ -219,7 +221,25 @@ body {
     background: #E50914;
     color: #ffffff;
 }
+.view-details  {
+    padding: 10px 25px;
+    border: 2px solid #E50914;
+    background: #000000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
+.view-details {
+    background: #E50914;
+    color: #ffffff !important;
+}
+.view-details a:link {
+    color: white !important;
+}
 .footer {
     width: 100%;
     min-height: 350px;
@@ -888,6 +908,7 @@ body {
 
     .phonedetails {
         flex-direction: column;
+        align-items: center;
         padding: 50px 40px;
         gap: 40px;
     }
