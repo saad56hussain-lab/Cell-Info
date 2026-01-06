@@ -1,0 +1,1348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: #0a0000;
+    color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #E50914;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #E50914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navlinks a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navlinks a:hover {
+    color: #E50914;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdownmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0a0000;
+    list-style: none;
+    display: none;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+    border: 2px solid #E50914;
+    margin-top: 5px;
+    z-index: 1001;
+}
+
+.dropdownmenu li a {
+    padding: 12px 15px;
+    color: #ffffff;
+    font-size: 14px;
+    border-bottom: 1px solid #E50914;
+    display: block;
+}
+
+.dropdownmenu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdownmenu li a:hover {
+    background: #E50914;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background: #000000;
+    background-image: url(images/cellinfobanner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #E50914;
+}
+
+.headingforcardsinhome {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.headingforcardsinhome h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E50914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.parentofcard {
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+    border: 2px solid #E50914;
+    background: #000000;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(229, 9, 20, 0.6);
+    border-color: #ff1f2c;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.overlay ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.overlay ul li {
+    font-size: 13px;
+    margin-bottom: 6px;
+    padding-left: 15px;
+    position: relative;
+    color: #ffffff;
+}
+
+.overlay ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #E50914;
+    font-weight: bold;
+}
+
+.overlay button {
+    padding: 10px 25px;
+    border: 2px solid #E50914;
+    background: #000000;
+    color: #E50914;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.overlay button:hover {
+    background: #E50914;
+    color: #ffffff;
+}
+
+.footer {
+    width: 100%;
+    min-height: 350px;
+    background: #0a0000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 100px 30px;
+    margin-top: 50px;
+    border-top: 2px solid #E50914;
+}
+
+.footer div {
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+}
+
+.footer a:hover {
+    color: #E50914;
+}
+
+.footer div i {
+    color: #E50914;
+    margin-right: 10px;
+}
+
+.phonedetails {
+    display: flex;
+    gap: 50px;
+    padding: 60px 10%;
+    color: #ffffff;
+    align-items: flex-start;
+}
+
+.phoneimage {
+    flex-shrink: 0;
+}
+
+.phoneimage img {
+    width: 500px;
+    height: 580px;
+    border-radius: 8px;
+    border: 2px solid #E50914;
+    background: #000000;
+}
+
+.phoneinfo {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.phoneinfo h1 {
+    color: #E50914;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.price {
+    color: #E50914;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.phoneinfo p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+.phoneinfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.phoneinfo ul li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    color: #cccccc;
+}
+
+.phoneinfo ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #E50914;
+    font-size: 18px;
+}
+
+
+.logoofapple,
+.logoofsamsung,
+.logoofgoogle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.logoofapple img,
+.logoofsamsung img,
+.logoofgoogle img {
+    width: 300px;
+    height: 300px;
+}
+
+.companyinfo {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px;
+    background: #0a0000;
+    border-radius: 8px;
+    border: 2px solid #E50914;
+}
+
+.companyinfo h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.companyinfo p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+    text-align: justify;
+}
+
+.companyinfo mark {
+    background: #E50914;
+    color: #ffffff;
+    padding: 2px 8px;
+    font-weight: 600;
+}
+
+.aboutcellinfo {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+    background: #0a0000;
+    gap: 60px;
+}
+
+.abouttext {
+    width: 55%;
+    color: #ffffff;
+}
+
+.abouttext h2 {
+    color: #E50914;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.abouttext p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.aboutimage {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutimage img {
+    width: 500px;
+    height: 450px;
+    border-radius: 8px;
+    border: 2px solid #E50914;
+}
+
+.contactheading {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.contactheading h2 {
+    color: #E50914;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contactheading p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.contactcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contactinfo {
+    width: 45%;
+}
+
+.infobox {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #0a0000;
+    border-radius: 8px;
+    border: 2px solid #E50914;
+}
+
+.infobox i {
+    font-size: 28px;
+    color: #E50914;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.infobox h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.infobox p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contactform {
+    width: 50%;
+    background: #0a0000;
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid #E50914;
+}
+
+.contactform h2 {
+    color: #E50914;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactform input,
+.contactform textarea {
+    padding: 12px;
+    border: 2px solid #E50914;
+    background: #000000;
+    outline: none;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.contactform input:focus,
+.contactform textarea:focus {
+    border-color: #ff1f2c;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.contactform input::placeholder,
+.contactform textarea::placeholder {
+    color: #666;
+}
+
+.contactform button {
+    padding: 12px;
+    background: #E50914;
+    color: #ffffff;
+    border: 2px solid #E50914;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.contactform button:hover {
+    background: #000000;
+    color: #E50914;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; }
+
+
+.comparison-heading {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.comparison-heading h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #E50914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.comparison-heading p {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.comparison-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.comparison-table {
+    overflow-x: auto;
+    margin-bottom: 60px;
+    border-radius: 8px;
+    border: 2px solid #E50914;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0a0000;
+}
+
+.comparison-table thead tr {
+    background: #E50914;
+}
+
+.comparison-table th {
+    padding: 20px 15px;
+    text-align: left;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #E50914;
+}
+
+.comparison-table th:first-child {
+    background: #000000;
+    border-right: 2px solid #E50914;
+    min-width: 150px;
+}
+
+.phone-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-header img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.phone-header h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid #333;
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(229, 9, 20, 0.1);
+}
+
+.comparison-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.comparison-table td {
+    padding: 15px;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.comparison-table td:first-child {
+    font-weight: 700;
+    color: #E50914;
+    background: rgba(229, 9, 20, 0.05);
+    border-right: 2px solid #E50914;
+}
+
+.comparison-table .price-cell {
+    font-weight: 700;
+    color: #E50914;
+    font-size: 16px;
+}
+
+.comparison-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.comp-card {
+    background: #0a0000;
+    border: 2px solid #E50914;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+.comp-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
+    border-color: #ff1f2c;
+}
+
+.comp-card h3 {
+    color: #E50914;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.comp-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.comp-card p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.comp-card span {
+    color: #cccccc;
+    font-size: 14px;
+    display: block;
+}
+
+/* Comparison Tips */
+.comparison-tips {
+    background: #0a0000;
+    border: 2px solid #E50914;
+    border-radius: 8px;
+    padding: 50px;
+    margin-bottom: 40px;
+}
+
+.comparison-tips h2 {
+    color: #E50914;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tip-item {
+    padding: 25px;
+    background: #000000;
+    border: 1px solid #E50914;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tip-item:hover {
+    border-color: #ff1f2c;
+    box-shadow: 0 5px 20px rgba(229, 9, 20, 0.3);
+    transform: translateY(-5px);
+}
+
+.tip-item i {
+    font-size: 36px;
+    color: #E50914;
+    margin-bottom: 15px;
+}
+
+.tip-item h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tip-item p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navlinks a {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .dropdownmenu {
+        min-width: 160px;
+    }
+
+    .banner {
+        height: 350px;
+    }
+
+    .headingforcardsinhome h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 290px;
+        height: 290px;
+    }
+
+    .overlay h2 {
+        font-size: 16px;
+    }
+
+    .overlay ul li {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 40px 40px 20px;
+        min-height: auto;
+    }
+
+    .footer div {
+        width: 220px;
+    }
+
+    .footer h2 {
+        font-size: 16px;
+    }
+
+    .aboutcellinfo {
+        flex-direction: column;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+
+    .abouttext {
+        width: 100%;
+    }
+
+    .abouttext h2 {
+        font-size: 32px;
+    }
+
+    .abouttext p {
+        font-size: 15px;
+    }
+
+    .aboutimage {
+        width: 100%;
+    }
+
+    .aboutimage img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .contactcontainer {
+        flex-direction: column;
+        padding: 40px 40px;
+        gap: 40px;
+    }
+
+    .contactinfo,
+    .contactform {
+        width: 100%;
+    }
+
+    .phonedetails {
+        flex-direction: column;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+
+    .phoneimage img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .phoneinfo {
+        width: 100%;
+    }
+
+    .phoneinfo h1 {
+        font-size: 32px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .companyinfo {
+        padding: 30px 40px;
+    }
+
+    .companyinfo h2 {
+        font-size: 28px;
+    }
+
+    .companyinfo p {
+        font-size: 15px;
+    }
+
+    .logoofapple img,
+    .logoofsamsung img,
+    .logoofgoogle img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navlinks {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navlinks a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .dropdownmenu {
+        position: static;
+        display: none;
+        width: 100%;
+        min-width: auto;
+    }
+
+    .dropdown:hover .dropdownmenu {
+        display: block;
+    }
+
+    .banner {
+        height: 300px;
+    }
+
+    .headingforcardsinhome h1 {
+        font-size: 24px;
+    }
+
+    .parentofcard {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .overlay h2 {
+        font-size: 16px;
+    }
+
+    .overlay ul li {
+        font-size: 11px;
+    }
+
+    .overlay button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 30px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer div {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .footer h2 {
+        font-size: 16px;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 13px;
+    }
+
+    .aboutcellinfo {
+        padding: 40px 25px;
+    }
+
+    .abouttext h2 {
+        font-size: 28px;
+    }
+
+    .abouttext p {
+        font-size: 14px;
+    }
+
+    .aboutimage img {
+        max-width: 350px;
+    }
+
+    .contactheading h2 {
+        font-size: 28px;
+    }
+
+    .contactheading p {
+        font-size: 14px;
+    }
+
+    .contactcontainer {
+        padding: 30px 25px;
+    }
+
+    .infobox {
+        padding: 15px;
+    }
+
+    .infobox i {
+        font-size: 24px;
+    }
+
+    .infobox h2 {
+        font-size: 16px;
+    }
+
+    .infobox p {
+        font-size: 14px;
+    }
+
+    .contactform {
+        padding: 25px;
+    }
+
+    .contactform h2 {
+        font-size: 20px;
+    }
+
+    .contactform input,
+    .contactform textarea {
+        font-size: 14px;
+    }
+
+    .phonedetails {
+        padding: 40px 25px;
+    }
+
+    .phoneimage img {
+        max-width: 350px;
+    }
+
+    .phoneinfo h1 {
+        font-size: 28px;
+    }
+
+    .phoneinfo p {
+        font-size: 14px;
+    }
+
+    .phoneinfo ul li {
+        font-size: 13px;
+    }
+
+    .companyinfo {
+        padding: 25px;
+    }
+
+    .companyinfo h2 {
+        font-size: 24px;
+    }
+
+    .companyinfo p {
+        font-size: 14px;
+    }
+
+    .logoofapple img,
+    .logoofsamsung img,
+    .logoofgoogle img {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .navlinks a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .banner {
+        height: 250px;
+    }
+
+    .headingforcardsinhome {
+        padding: 30px 15px 15px;
+    }
+
+    .headingforcardsinhome h1 {
+        font-size: 20px;
+    }
+
+    .parentofcard {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .card {
+        height: 260px;
+    }
+
+    .overlay h2 {
+        font-size: 15px;
+    }
+
+    .overlay ul li {
+        font-size: 10px;
+    }
+
+    .overlay button {
+        padding: 6px 16px;
+        font-size: 11px;
+    }
+
+    .footer {
+        padding: 25px 20px;
+    }
+
+    .footer h2 {
+        font-size: 15px;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 12px;
+    }
+
+    .aboutcellinfo {
+        padding: 30px 20px;
+    }
+
+    .abouttext h2 {
+        font-size: 24px;
+    }
+
+    .abouttext p {
+        font-size: 13px;
+    }
+
+    .aboutimage img {
+        max-width: 280px;
+    }
+
+    .contactheading {
+        padding: 40px 20px 30px;
+    }
+
+    .contactheading h2 {
+        font-size: 24px;
+    }
+
+    .contactheading p {
+        font-size: 13px;
+    }
+
+    .contactcontainer {
+        padding: 25px 20px;
+    }
+
+    .infobox {
+        padding: 15px;
+    }
+
+    .infobox i {
+        font-size: 20px;
+    }
+
+    .infobox h2 {
+        font-size: 15px;
+    }
+
+    .infobox p {
+        font-size: 13px;
+    }
+
+    .contactform {
+        padding: 20px;
+    }
+
+    .contactform h2 {
+        font-size: 18px;
+    }
+
+    .contactform input,
+    .contactform textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .phonedetails {
+        padding: 30px 20px;
+    }
+
+    .phoneimage img {
+        max-width: 280px;
+    }
+
+    .phoneinfo h1 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+
+    .phoneinfo p {
+        font-size: 13px;
+    }
+
+    .phoneinfo ul li {
+        font-size: 12px;
+    }
+
+    .companyinfo {
+        padding: 20px;
+    }
+
+    .companyinfo h2 {
+        font-size: 20px;
+    }
+
+    .companyinfo p {
+        font-size: 13px;
+    }
+
+    .logoofapple img,
+    .logoofsamsung img,
+    .logoofgoogle img {
+        max-width: 200px;
+    }
+
+    .comparison-heading h1 {
+        font-size: 28px;
+    }
+
+    .comparison-heading p {
+        font-size: 14px;
+    }
+
+    .comparison-table {
+        font-size: 12px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px 8px;
+    }
+
+    .phone-header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .phone-header h3 {
+        font-size: 12px;
+    }
+
+    .comp-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .comp-card img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .comp-card h3 {
+        font-size: 16px;
+    }
+
+    .comparison-tips {
+        padding: 30px 20px;
+    }
+
+    .comparison-tips h2 {
+        font-size: 24px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tip-item {
+        padding: 20px;
+    }
+
+    .tip-item i {
+        font-size: 28px;
+    }
+
+    .tip-item h3 {
+        font-size: 16px;
+    }
+
+    .tip-item p {
+        font-size: 13px;
+    }
+}
