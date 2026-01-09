@@ -15,7 +15,7 @@ document.getElementById("navbar").innerHTML = `
             </ul>
         </li>
 
-        <li><a href="comparison.html">Comparision</a></li>
+        <li><a href="comparison.html">Comparison</a></li>
         <li><a href="contact.html">Contact Us</a></li>
     </ul>
 </nav>`
