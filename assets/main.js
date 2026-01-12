@@ -16,7 +16,7 @@ document.getElementById("navbar").innerHTML = `
         </li>
 
         <li><a href="comparison.html">Comparison</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>`
 document.getElementById("footer").innerHTML = `
